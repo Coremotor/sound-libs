@@ -13,6 +13,7 @@ const buttonPause = document.querySelector('#btn-pause')
 const delayCheckbox = document.querySelector('#delay-checkbox')
 const reverbCheckbox = document.querySelector('#reverb-checkbox')
 const convolverCheckbox = document.querySelector('#convolver-checkbox')
+const convolverSelect = document.querySelector('#convolver-select')
 
 export const sound = new pz.Sound({
     source: 'file',
@@ -40,9 +41,11 @@ const onSoundLoaded = (sound) => {
 
     convolverCheckbox.addEventListener('change', (e) => {
         if (e.target.checked) {
+            convolverSelect.removeAttribute('disabled')
             sound.addEffect(convolver)
         }
         if (!e.target.checked) {
+            convolverSelect.setAttribute('disabled', 'true')
             sound.removeEffect(convolver)
         }
     })

@@ -1,5 +1,6 @@
 import pz from 'pizzicato'
 import {sound} from '../index'
+import {convolverOn} from "../index";
 import BlockInside from '../files/IMreverbs/BlockInside.wav'
 import BottleHall from '../files/IMreverbs/BottleHall.wav'
 import CementBlocks1 from '../files/IMreverbs/CementBlocks1.wav'
